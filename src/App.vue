@@ -1,32 +1,51 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  font-size: 24px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  color: black;
 }
 
-nav {
-  padding: 30px;
+*::after, *::before {
+  display: block;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+/* ROOT ELEMENT */
+/* Break Point */
+/* Medium screens - TABLET */
+@media only screen and (min-width: 40.063em) {
+  
+  #app {
+     width: 100%;
+     font-size: 24px;
+  }
+} /* min-width 641px, medium screens */
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  
+  #app {
+     width: 95%;
+     margin: 0 auto;
+     position: relative;
+
+  }
+} /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+@media only screen and (min-width: 64.063em) and (max-width: 120em) {
+  
+  #app {
+     width: 55%;
+     margin: 0 auto;
+     font-size: 36px;
+     position: relative;
   }
 }
 </style>
